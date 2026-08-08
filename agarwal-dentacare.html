@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Agarwal Dentacare – Dr. Sourav Agarwal, MDS (Ortho). Complete dental solutions in Jaipur – braces, aligners, implants, RCT, cleaning and bleaching.">
+  <meta name="keywords" content="Dr Sourav Agarwal, Agarwal Dentacare, dentist Jaipur, orthodontist Jaipur, braces, aligners, dental clinic Kishanpole">
+  <meta name="author" content="Agarwal Dentacare">
+  <title>Agarwal Dentacare | Dr. Sourav Agarwal – Complete Dental Solutions, Jaipur</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #0B1C2C;
+      --navy-mid: #132A3E;
+      --blue: #1A6BA8;
+      --blue-soft: #E8F3FA;
+      --sky: #4BA3D0;
+      --bg: #F7F9FB;
+      --white: #FFFFFF;
+      --text: #1A2330;
+      --muted: #5A6570;
+      --border: rgba(11, 28, 44, 0.08);
+      --shadow: 0 12px 40px rgba(11, 28, 44, 0.08);
+      --radius: 16px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button, input, textarea { font-family: inherit; }
+
+    .container { width: min(1140px, 92%); margin: 0 auto; }
+    .section { padding: 96px 0; }
+    .section-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: clamp(2rem, 4vw, 2.85rem);
+      font-weight: 400;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .section-desc {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 540px;
+      margin-bottom: 0;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn-primary {
+      background: var(--navy);
+      color: var(--white);
+    }
+    .btn-primary:hover {
+      background: var(--navy-mid);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(11, 28, 44, 0.25);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.7);
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: #fff;
+    }
+    .btn-blue {
+      background: var(--blue);
+      color: #fff;
+    }
+    .btn-blue:hover {
+      background: #155a8f;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(26, 107, 168, 0.3);
+    }
+
+    /* NAV */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      z-index: 1000;
+      padding: 18px 0;
+      transition: all 0.35s ease;
+    }
+    .navbar.scrolled {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 4px 24px rgba(11,28,44,0.06);
+      padding: 12px 0;
+    }
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.45rem;
+      color: #fff;
+      letter-spacing: 0.3px;
+      transition: color 0.3s;
+    }
+    .navbar.scrolled .logo { color: var(--navy); }
+    .logo span { color: var(--sky); }
+    .navbar.scrolled .logo span { color: var(--blue); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.9);
+      transition: color 0.25s;
+    }
+    .navbar.scrolled .nav-links a { color: var(--text); }
+    .nav-links a:hover { color: var(--sky); }
+    .navbar.scrolled .nav-links a:hover { color: var(--blue); }
+    .nav-cta {
+      padding: 10px 20px !important;
+      background: var(--blue);
+      color: #fff !important;
+      border-radius: 50px;
+      font-size: 0.85rem !important;
+    }
+    .nav-cta:hover { background: #155a8f !important; color: #fff !important; }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 1001;
+    }
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      transition: all 0.3s;
+    }
+    .navbar.scrolled .menu-toggle span { background: var(--navy); }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--navy);
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('images/hero.jpg') center/cover no-repeat;
+      opacity: 0.35;
+      transform: scale(1.05);
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(11,28,44,0.92) 0%, rgba(11,28,44,0.75) 50%, rgba(19,42,62,0.85) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+      padding: 120px 0 80px;
+      color: #fff;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(75, 163, 208, 0.2);
+      border: 1px solid rgba(75, 163, 208, 0.35);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      margin-bottom: 24px;
+      color: #B8DFF0;
+    }
+    .hero h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(2.6rem, 6vw, 4rem);
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+    .hero-sub {
+      font-size: clamp(1.05rem, 2vw, 1.2rem);
+      font-weight: 400;
+      opacity: 0.88;
+      max-width: 520px;
+      margin-bottom: 12px;
+      line-height: 1.65;
+    }
+    .hero-doctor {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--sky);
+      margin-bottom: 32px;
+    }
+    .hero-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    /* TRUST BAR */
+    .trust-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 28px 0;
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align: center;
+    }
+    .trust-item strong {
+      display: block;
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.35rem;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .trust-item span {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .about-img {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .about-img img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+    .about-img-badge {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(8px);
+      padding: 14px 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    .about-img-badge strong {
+      display: block;
+      font-size: 0.95rem;
+      color: var(--navy);
+    }
+    .about-img-badge span {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .about-content .section-desc { margin-bottom: 20px; }
+    .about-credentials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 24px 0 28px;
+    }
+    .cred-tag {
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 50px;
+    }
+
+    /* SERVICES */
+    .services-section { background: var(--white); }
+    .services-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .services-header .section-desc { margin: 0 auto; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+    .service-card {
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 32px 24px;
+      border: 1px solid transparent;
+      transition: all 0.35s ease;
+    }
+    .service-card:hover {
+      background: var(--white);
+      border-color: rgba(26, 107, 168, 0.15);
+      box-shadow: var(--shadow);
+      transform: translateY(-6px);
+    }
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--blue-soft);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      transition: all 0.3s;
+    }
+    .service-icon svg {
+      width: 26px;
+      height: 26px;
+      stroke: var(--blue);
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke 0.3s;
+    }
+    .service-card:hover .service-icon {
+      background: var(--blue);
+    }
+    .service-card:hover .service-icon svg {
+      stroke: #fff;
+    }
+    .service-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .service-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* WHY */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+    .why-card {
+      text-align: center;
+      padding: 28px 16px;
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+    }
+    .why-card:hover {
+      border-color: rgba(26, 107, 168, 0.2);
+      box-shadow: var(--shadow);
+    }
+    .why-num {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.8rem;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+    .why-card h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .why-card p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* GALLERY */
+    .gallery-section { background: var(--white); }
+    .gallery-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .gallery-header .section-desc { margin: 0 auto; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 240px;
+      gap: 14px;
+    }
+    .gallery-item {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .gallery-item:nth-child(1) { grid-row: span 2; }
+    .gallery-item:nth-child(4) { grid-column: span 2; }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.55s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.08); }
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(11,28,44,0);
+      transition: background 0.3s;
+    }
+    .gallery-item:hover::after { background: rgba(11,28,44,0.25); }
+    .gallery-item .zoom {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%) scale(0.7);
+      opacity: 0;
+      color: #fff;
+      font-size: 1.6rem;
+      z-index: 2;
+      transition: all 0.3s;
+    }
+    .gallery-item:hover .zoom {
+      opacity: 1;
+      transform: translate(-50%,-50%) scale(1);
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(8, 16, 24, 0.92);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      padding: 20px;
+    }
+    .lightbox.active { opacity: 1; visibility: visible; }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 85vh;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px; right: 24px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      opacity: 0.8;
+      line-height: 1;
+    }
+    .lightbox-close:hover { opacity: 1; }
+
+    /* COMFORT */
+    .comfort-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .comfort-img {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .comfort-img img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+    .comfort-list {
+      margin-top: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .comfort-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .comfort-item .check {
+      width: 28px;
+      height: 28px;
+      background: var(--blue-soft);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue);
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .comfort-item p {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    /* LOCATION */
+    .location-section {
+      background: var(--navy);
+      color: #fff;
+    }
+    .location-section .section-label { color: var(--sky); }
+    .location-section .section-title { color: #fff; }
+    .location-section .section-desc { color: rgba(255,255,255,0.7); }
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 40px;
+      margin-top: 40px;
+      align-items: start;
+    }
+    .location-info h3 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+    .loc-detail {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+    .loc-detail .icon {
+      width: 42px;
+      height: 42px;
+      background: rgba(75,163,208,0.15);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .loc-detail h4 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--sky);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 4px;
+    }
+    .loc-detail p, .loc-detail a {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.5;
+    }
+    .loc-detail a:hover { color: var(--sky); }
+    .location-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .map-embed {
+      border-radius: var(--radius);
+      overflow: hidden;
+      height: 320px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .map-embed iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* CONTACT CTA */
+    .contact-cta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .contact-cta-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px 28px;
+      text-align: center;
+      transition: all 0.35s ease;
+      display: block;
+    }
+    a.contact-cta-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+      border-color: rgba(26, 107, 168, 0.2);
+    }
+    .contact-cta-card .cta-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 18px;
+      background: var(--blue-soft);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue);
+    }
+    .call-card .cta-icon { background: rgba(11, 28, 44, 0.08); color: var(--navy); }
+    .contact-cta-card h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .cta-number {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 8px;
+      letter-spacing: 0.3px;
+    }
+    .call-card .cta-number { color: var(--navy); font-size: 1.35rem; }
+    .cta-hint {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.75);
+      padding: 64px 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 36px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer-brand .logo {
+      color: #fff;
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+    .footer-brand p {
+      font-size: 0.9rem;
+      line-height: 1.65;
+      max-width: 280px;
+      opacity: 0.8;
+    }
+    .footer-col h4 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col a {
+      font-size: 0.9rem;
+      opacity: 0.75;
+      transition: all 0.25s;
+    }
+    .footer-col a:hover {
+      opacity: 1;
+      color: var(--sky);
+    }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 0;
+      font-size: 0.85rem;
+      opacity: 0.6;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* FLOATING */
+    .float-btns {
+      position: fixed;
+      bottom: 24px;
+      right: 20px;
+      z-index: 900;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .float-btn {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+    }
+    .float-btn:hover { transform: scale(1.08); }
+    .float-call { background: var(--navy); }
+    .float-dir { background: var(--blue); }
+
+    /* REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: repeat(3, 1fr); }
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 200px; }
+      .gallery-item:nth-child(1) { grid-row: span 1; }
+      .gallery-item:nth-child(4) { grid-column: span 1; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .contact-cta-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+    }
+    @media (max-width: 768px) {
+      .section { padding: 72px 0; }
+      .nav-links {
+        position: fixed;
+        top: 0; right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--navy);
+        flex-direction: column;
+        padding: 80px 32px 40px;
+        gap: 24px;
+        transition: right 0.35s ease;
+        box-shadow: -8px 0 30px rgba(0,0,0,0.2);
+      }
+      .nav-links.open { right: 0; }
+      .nav-links a { color: #fff !important; font-size: 1.05rem; }
+      .menu-toggle { display: flex; }
+      .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+      .menu-toggle.active span:nth-child(2) { opacity: 0; }
+      .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+      .about-grid, .comfort-grid, .location-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .contact-cta-grid { grid-template-columns: 1fr; }
+      .about-img img { height: 340px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .hero-btns { flex-direction: column; }
+      .hero-btns .btn { width: 100%; max-width: 280px; }
+      .location-btns .btn { flex: 1; min-width: 140px; }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .trust-grid { grid-template-columns: 1fr 1fr; }
+      .float-btns { bottom: 16px; right: 14px; }
+      .float-btn { width: 48px; height: 48px; font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main">
+    <div class="container">
+      <a href="#home" class="logo">Agarwal <span>Dentacare</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#contact" class="nav-cta">Book Appointment</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">Dr. Sourav Agarwal · Advanced Dental Care</div>
+        <h1>Confident Smiles Begin Here</h1>
+        <p class="hero-sub">Professional dental care focused on healthy, comfortable and confident smiles.</p>
+        <p class="hero-doctor">Dr. Sourav Agarwal · MDS (Ortho), BDS · Braces &amp; Aligners Specialist</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn btn-primary">Book an Appointment</a>
+          <a href="tel:09314777775" class="btn btn-outline">Call the Clinic</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <strong>MDS (Ortho)</strong>
+          <span>Orthodontics Specialist</span>
+        </div>
+        <div class="trust-item">
+          <strong>BDS, MIDA</strong>
+          <span>Qualified Dental Care</span>
+        </div>
+        <div class="trust-item">
+          <strong>Implants &amp; RCT</strong>
+          <span>Complete Solutions</span>
+        </div>
+        <div class="trust-item">
+          <strong>Jaipur</strong>
+          <span>Kishanpole Bazar</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img reveal">
+          <img src="images/about.jpg" alt="Agarwal Dentacare clinic interior" loading="lazy">
+          <div class="about-img-badge">
+            <strong>Dr. Sourav Agarwal</strong>
+            <span>MDS (Ortho) · Implantologist</span>
+          </div>
+        </div>
+        <div class="about-content">
+          <span class="section-label reveal">About the Doctor</span>
+          <h2 class="section-title reveal">Care you can trust for every smile</h2>
+          <p class="section-desc reveal">
+            Dr. Sourav Agarwal leads Agarwal Dentacare with a focus on clear communication, careful diagnosis and comfortable treatment. Whether you need routine care, orthodontic treatment or restorative work, the clinic is designed to make your visit straightforward and reassuring.
+          </p>
+          <p class="section-desc reveal">
+            As a specialist in braces and aligners, Dr. Agarwal helps patients of different ages achieve healthier alignment and lasting confidence — always with attention to hygiene, comfort and individual needs.
+          </p>
+          <div class="about-credentials reveal">
+            <span class="cred-tag">MDS (Ortho)</span>
+            <span class="cred-tag">BDS</span>
+            <span class="cred-tag">MIDA</span>
+            <span class="cred-tag">Braces &amp; Aligners</span>
+            <span class="cred-tag">Implantologist</span>
+          </div>
+          <a href="#contact" class="btn btn-blue reveal">Schedule a Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="services-header">
+        <span class="section-label reveal">What We Offer</span>
+        <h2 class="section-title reveal">Dental services for every need</h2>
+        <p class="section-desc reveal">From preventive care to orthodontics and restorative treatment — complete dental solutions under one roof.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2c-1.5 2-3 3.5-3 6.5 0 2 1 3.5 3 5.5 2-2 3-3.5 3-5.5C15 5.5 13.5 4 12 2z"/><path d="M9 14c-1 1.5-2 3-2 5h10c0-2-1-3.5-2-5"/><path d="M8 21h8"/></svg></div>
+          <h3>General Dentistry</h3>
+          <p>Comprehensive check-ups and treatment for everyday oral health concerns.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></div>
+          <h3>Dental Cleaning</h3>
+          <p>Professional scaling and polishing to keep your teeth and gums healthy.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8L19 14z"/></svg></div>
+          <h3>Teeth Whitening</h3>
+          <p>Safe bleaching options to brighten your smile with professional care.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          <h3>Root Canal Treatment</h3>
+          <p>Careful RCT to treat infection and preserve your natural tooth.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg></div>
+          <h3>Dental Fillings</h3>
+          <p>Quality restorations to repair cavities and restore function.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M5 16l3-8 2 4 2-6 2 6 2-4 3 8"/><path d="M4 20h16"/></svg></div>
+          <h3>Crowns &amp; Bridges</h3>
+          <p>Durable crowns and bridges for damaged or missing teeth.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/><path d="M12 12v8"/></svg></div>
+          <h3>Tooth Replacement</h3>
+          <p>Implant-based and other options to restore missing teeth confidently.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Preventive Care</h3>
+          <p>Guidance and routines that help protect your smile for the long term.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h14"/><circle cx="18" cy="12" r="2"/></svg></div>
+          <h3>Braces &amp; Aligners</h3>
+          <p>Orthodontic treatment tailored for alignment and a balanced bite.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2v6M12 16v6"/><circle cx="12" cy="12" r="3"/><path d="M6 8l-2-2M18 8l2-2M6 16l-2 2M18 16l2 2"/></svg></div>
+          <h3>Dental Implants</h3>
+          <p>Stable, natural-feeling replacement for single or multiple missing teeth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE -->
+  <section class="section" id="why">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:48px;">
+        <span class="section-label reveal">Why Patients Choose Us</span>
+        <h2 class="section-title reveal">A calm, professional experience</h2>
+        <p class="section-desc reveal" style="margin:0 auto;">Thoughtful care in a clean, modern setting — focused on your comfort and clarity at every step.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-num">01</div>
+          <h3>Patient-focused care</h3>
+          <p>Time to listen, explain and plan treatment around your needs.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-num">02</div>
+          <h3>Modern environment</h3>
+          <p>Clean, well-equipped clinic designed for comfort and efficiency.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-num">03</div>
+          <h3>Hygiene-focused</h3>
+          <p>Strict attention to sterilisation and clinical cleanliness.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-num">04</div>
+          <h3>Personalised plans</h3>
+          <p>Treatment recommendations tailored to your oral health goals.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-num">05</div>
+          <h3>Comfortable visits</h3>
+          <p>Clear communication so you always know what to expect.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section gallery-section" id="gallery">
+    <div class="container">
+      <div class="gallery-header">
+        <span class="section-label reveal">Clinic Tour</span>
+        <h2 class="section-title reveal">A look inside Agarwal Dentacare</h2>
+        <p class="section-desc reveal">Reception, consultation and treatment spaces designed for a calm, professional visit.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item reveal" data-src="images/gallery1.jpg">
+          <img src="images/gallery1.jpg" alt="Clinic reception and waiting area" loading="lazy">
+          <span class="zoom">🔍</span>
+        </div>
+        <div class="gallery-item reveal" data-src="images/gallery2.jpg">
+          <img src="images/gallery2.jpg" alt="Consultation desk" loading="lazy">
+          <span class="zoom">🔍</span>
+        </div>
+        <div class="gallery-item reveal" data-src="images/gallery3.jpg">
+          <img src="images/gallery3.jpg" alt="Treatment room and equipment" loading="lazy">
+          <span class="zoom">🔍</span>
+        </div>
+        <div class="gallery-item reveal" data-src="images/gallery4.jpg">
+          <img src="images/gallery4.jpg" alt="Clinic entrance and neon signage" loading="lazy">
+          <span class="zoom">🔍</span>
+        </div>
+        <div class="gallery-item reveal" data-src="images/gallery5.jpg">
+          <img src="images/gallery5.jpg" alt="Agarwal Dentacare exterior" loading="lazy">
+          <span class="zoom">🔍</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <img src="" alt="Clinic photo" id="lightboxImg">
+  </div>
+
+  <!-- COMFORT -->
+  <section class="section" id="comfort">
+    <div class="container">
+      <div class="comfort-grid">
+        <div class="comfort-content">
+          <span class="section-label reveal">Patient Experience</span>
+          <h2 class="section-title reveal">Your comfort matters</h2>
+          <p class="section-desc reveal">
+            Dental visits should feel clear and manageable. At Agarwal Dentacare, the focus is on making every step — from the first consultation to treatment — as comfortable and stress-free as possible.
+          </p>
+          <div class="comfort-list">
+            <div class="comfort-item reveal">
+              <span class="check">✓</span>
+              <p>Clear explanation of findings and treatment options before you decide.</p>
+            </div>
+            <div class="comfort-item reveal">
+              <span class="check">✓</span>
+              <p>Calm clinical environment with attention to privacy and hygiene.</p>
+            </div>
+            <div class="comfort-item reveal">
+              <span class="check">✓</span>
+              <p>Time for questions so you leave with confidence, not confusion.</p>
+            </div>
+            <div class="comfort-item reveal">
+              <span class="check">✓</span>
+              <p>Care that respects your schedule and individual concerns.</p>
+            </div>
+          </div>
+        </div>
+        <div class="comfort-img reveal">
+          <img src="images/comfort.jpg" alt="Comfortable clinic waiting area" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="section location-section" id="location">
+    <div class="container">
+      <span class="section-label reveal">Find Us</span>
+      <h2 class="section-title reveal">Visit Our Clinic</h2>
+      <p class="section-desc reveal">Agarwal Dentacare is located in the heart of Jaipur’s Kishanpole area — easy to reach for consultations and treatment.</p>
+      <div class="location-grid">
+        <div class="location-info reveal">
+          <h3>Agarwal Dentacare</h3>
+          <div class="loc-detail">
+            <div class="icon">📍</div>
+            <div>
+              <h4>Address</h4>
+              <p>1433, Maniharo Ka Rasta<br>Kishanpole Bazar, Modikhana<br>Jaipur, Rajasthan 302002</p>
+            </div>
+          </div>
+          <div class="loc-detail">
+            <div class="icon">📞</div>
+            <div>
+              <h4>Phone</h4>
+              <p><a href="tel:09314777775">093147 77775</a></p>
+            </div>
+          </div>
+          <div class="loc-detail">
+            <div class="icon">👨‍⚕️</div>
+            <div>
+              <h4>Doctor</h4>
+              <p>Dr. Sourav Agarwal<br>MDS (Ortho), BDS, MIDA</p>
+            </div>
+          </div>
+          <div class="location-btns">
+            <a href="https://maps.app.goo.gl/veVG88WDFGf5BoM98?g_st=ac" target="_blank" rel="noopener" class="btn btn-blue">Get Directions</a>
+            <a href="tel:09314777775" class="btn btn-outline">Call Clinic</a>
+            <a href="#contact" class="btn btn-outline">Book Appointment</a>
+          </div>
+        </div>
+        <div class="map-embed reveal">
+          <iframe
+            src="https://www.google.com/maps?q=Dr.+Sourav+Agarwal,+Agarwal+Dentacare,+1433,+Maniharo+Ka+Rasta,+Kishanpole+Bazar,+Modikhana,+Jaipur,+Rajasthan+302002&output=embed"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Agarwal Dentacare location">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div style="text-align:center; max-width:640px; margin:0 auto 40px;">
+        <span class="section-label reveal">Get in Touch</span>
+        <h2 class="section-title reveal">Book your visit</h2>
+        <p class="section-desc reveal" style="margin:0 auto;">
+          Call the clinic directly to schedule a consultation or ask about treatment. We’re happy to guide you.
+        </p>
+      </div>
+      <div class="contact-cta-grid reveal">
+        <a href="tel:09314777775" class="contact-cta-card call-card">
+          <div class="cta-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <h3>Call the Clinic</h3>
+          <p class="cta-number">093147 77775</p>
+          <span class="cta-hint">Tap to dial · Speaks to the clinic</span>
+        </a>
+        <a href="https://maps.app.goo.gl/veVG88WDFGf5BoM98?g_st=ac" target="_blank" rel="noopener" class="contact-cta-card dir-card">
+          <div class="cta-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Get Directions</h3>
+          <p class="cta-number">Kishanpole Bazar, Jaipur</p>
+          <span class="cta-hint">Open in Google Maps</span>
+        </a>
+        <div class="contact-cta-card info-card">
+          <div class="cta-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h3>Dr. Sourav Agarwal</h3>
+          <p class="cta-number">MDS (Ortho), BDS, MIDA</p>
+          <span class="cta-hint">Braces · Aligners · Implants · RCT</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="logo">Agarwal <span>Dentacare</span></a>
+          <p>Complete dental solutions under the care of Dr. Sourav Agarwal — orthodontics, implants, RCT and everyday dental care in Jaipur.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Clinic</h4>
+          <ul>
+            <li><a href="#location">Location</a></li>
+            <li><a href="https://maps.app.goo.gl/veVG88WDFGf5BoM98?g_st=ac" target="_blank" rel="noopener">Get Directions</a></li>
+            <li><a href="#contact">Book Appointment</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:09314777775" style="font-weight:600; font-size:1.05rem; color:#fff; opacity:1;">093147 77775</a></li>
+            <li>Dr. Sourav Agarwal</li>
+            <li>Kishanpole Bazar, Jaipur</li>
+          </ul>
+          <a href="tel:09314777775" class="btn btn-blue" style="margin-top:16px; padding:12px 22px; font-size:0.9rem;">Call Now</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year"></span> Agarwal Dentacare. All rights reserved.</span>
+        <a href="tel:09314777775" style="color:#4BA3D0; font-weight:600;">Call: 093147 77775</a>
+        <span>Dr. Sourav Agarwal · MDS (Ortho)</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING -->
+  <div class="float-btns">
+    <a href="tel:09314777775" class="float-btn float-call" aria-label="Call clinic">📞</a>
+    <a href="https://maps.app.goo.gl/veVG88WDFGf5BoM98?g_st=ac" target="_blank" rel="noopener" class="float-btn float-dir" aria-label="Directions">🗺️</a>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Navbar
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => observer.observe(el));
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.addEventListener('click', () => {
+        lightboxImg.src = item.dataset.src || item.querySelector('img').src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    function closeLb() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('lightboxClose').addEventListener('click', closeLb);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLb(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+  </script>
+</body>
+</html>
